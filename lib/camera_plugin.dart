@@ -54,7 +54,25 @@ class CameraController {
     return _channel.invokeMethod('start');
   }
 
-  Future<String> takePicture() async{
+  Future<void> pause() async {
+    return _channel.invokeMethod('pause');
+  }
+
+  Future<void> stop() async {
+    return _channel.invokeMethod('stop');
+  }
+
+  Future<String> takePicture() async {
     return _channel.invokeMethod('takePicture');
   }
+
+  Future<void> switchCamera() async {
+    return _channel.invokeMethod('switchCamera');
+  }
+
+  Future<void> startRecord() async {}
+
+  Future<void> stopRecord() async {}
+
+  Future<void> cancelRecord() async {}
 }
