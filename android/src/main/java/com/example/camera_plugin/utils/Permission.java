@@ -6,8 +6,9 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 
-public class Permission extends Activity {
+public class Permission implements ActivityCompat.OnRequestPermissionsResultCallback{
 
     private final static int MY_PERMISSION_REQUEST_CAMERA = 100;
 
@@ -29,6 +30,8 @@ public class Permission extends Activity {
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
+        Log.d("sasad","e foi");
+
         switch (requestCode) {
             case MY_PERMISSION_REQUEST_CAMERA: {
                 // If request is cancelled, the result arrays are empty.
@@ -37,10 +40,11 @@ public class Permission extends Activity {
 
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
-
+                    Log.d("sasad","Aceito");
                 } else {
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
+                    Log.d("sasad","Negado");
                 }
                 return;
             }

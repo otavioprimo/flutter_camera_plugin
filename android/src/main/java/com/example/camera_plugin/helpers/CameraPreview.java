@@ -26,10 +26,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         Log.d("sasad", "Start CameraPreview");
     }
 
-    public void click() {
-        Log.d("sasad", "clicou");
-    }
-
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try {
